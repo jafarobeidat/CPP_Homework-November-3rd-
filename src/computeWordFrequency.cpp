@@ -1,31 +1,38 @@
-// This file will include implementation of std::map<std::string, int> computeWordFrequency(const std::vector<char>& book);
-// This function will take the character vector from readBook, use std::stringstream to extract words, and store each word's count in a map.
-// We will use std::map to store words with their counts, making it easier to later sort and retrieve data.
-
-#include <map>
-#include <string>
 #include <sstream>
-#include <computeWordFrequency.h>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include "computeWordFrequency.h"
 
 /**
- * @brief Computes the frequency of words in the provided text.
+ * @brief Computes the frequency of each word in the given text.
  *
- * This function takes a string of text, extracts words using a stringstream, 
- * and counts the occurrences of each word. The results are stored in a map,
- * where each key is a word, and the corresponding value is its frequency.
+ * This function reads words from the input text, counts their occurrences,
+ * and stores the results in a vector of pairs.
  *
- * @param text A string containing the text from which to compute word frequencies.
- * @return A map containing words as keys and their corresponding frequencies as values.
+ * @param text The input text as a string.
+ * @return A vector of pairs, each containing a word and its frequency.
  */
-std::map<std::string, int> computeWordFrequency(const std::string& text)
-{
-    std::map<std::string, int> frequencyMap; // Here we created a map to store the frequency of each word
-    std::stringstream ss(text); // Here we created a stringstream object to store the contents of the text
-    std::string word; // Here we created a string to store each word
+std::vector<std::pair<std::string, int>> computeWordFrequencyFromText(const std::string& text) {
+    std::vector<std::pair<std::string, int>> frequencyVector; // Vector to store word-frequency pairs
+    std::stringstream ss(text); // Stringstream to extract words
+    std::string word;
 
-    while (ss >> word) // Here we loop through the stringstream object to extract each word
-    {
-        ++frequencyMap[word]; // Here we increment the frequency of the word in the map
+    // Extract words from the text
+    while (ss >> word) {
+        // Find if the word is already in the vector
+        auto it = std::find_if(frequencyVector.begin(), frequencyVector.end(), [&word](const auto& pair) {
+            return pair.first == word; // Check if word exists
+        });
+
+        if (it != frequencyVector.end()) {
+            // If found, increment the frequency
+            ++it->second;
+        } else {
+            // If not found, add a new pair with frequency 1
+            frequencyVector.emplace_back(word, 1);
+        }
     }
-    return frequencyMap; // Here we return the map containing the frequency of each word
+
+    return frequencyVector; // Return vector of word-frequency pairs
 }
