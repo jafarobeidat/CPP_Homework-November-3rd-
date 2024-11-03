@@ -1,0 +1,8 @@
+PROJECT_NAME           = "Zipf's Law Analyzer"
+OUTPUT_DIRECTORY       = ../docs/output
+INPUT                  = ../src
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+QUIET                  = YES

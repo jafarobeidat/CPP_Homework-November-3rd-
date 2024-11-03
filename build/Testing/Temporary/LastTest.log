@@ -1,0 +1,56 @@
+Start testing: Nov 03 16:57 Romance Standard Time
+----------------------------------------------------------
+1/1 Testing: RunAllTests
+1/1 Test: RunAllTests
+Command: "C:/Users/ThinkBook/OneDrive/Desktop/School/Y3S1/Computer Programming/Session 17/build/test/all_tests.exe"
+Directory: C:/Users/ThinkBook/OneDrive/Desktop/School/Y3S1/Computer Programming/Session 17/build/test
+"RunAllTests" start time: Nov 03 16:57 Romance Standard Time
+Output:
+----------------------------------------------------------
+[==========] Running 6 tests from 6 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from ReadBookTest
+[ RUN      ] ReadBookTest.ReadsBookCorrectly
+[       OK ] ReadBookTest.ReadsBookCorrectly (65 ms)
+[----------] 1 test from ReadBookTest (65 ms total)
+
+[----------] 1 test from ComputeWordFrequencyTest
+[ RUN      ] ComputeWordFrequencyTest.ComputesCorrectFrequencies
+[       OK ] ComputeWordFrequencyTest.ComputesCorrectFrequencies (0 ms)
+[----------] 1 test from ComputeWordFrequencyTest (0 ms total)
+
+[----------] 1 test from CountUniqueWordsTest
+[ RUN      ] CountUniqueWordsTest.CountsUniqueWordsCorrectly
+[       OK ] CountUniqueWordsTest.CountsUniqueWordsCorrectly (0 ms)
+[----------] 1 test from CountUniqueWordsTest (0 ms total)
+
+[----------] 1 test from HapaxLegomenonTest
+[ RUN      ] HapaxLegomenonTest.IdentifiesHapaxCorrectly
+[       OK ] HapaxLegomenonTest.IdentifiesHapaxCorrectly (0 ms)
+[----------] 1 test from HapaxLegomenonTest (0 ms total)
+
+[----------] 1 test from SortFrequenciesTest
+[ RUN      ] SortFrequenciesTest.SortsCorrectly
+[       OK ] SortFrequenciesTest.SortsCorrectly (0 ms)
+[----------] 1 test from SortFrequenciesTest (0 ms total)
+
+[----------] 1 test from PlotResultsTest
+[ RUN      ] PlotResultsTest.PlotsWithoutError
+word1: 5
+word2: 3
+word3: 2
+[       OK ] PlotResultsTest.PlotsWithoutError (0 ms)
+[----------] 1 test from PlotResultsTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 6 test suites ran. (66 ms total)
+[  PASSED  ] 6 tests.
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"RunAllTests" end time: Nov 03 16:57 Romance Standard Time
+"RunAllTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 03 16:57 Romance Standard Time
